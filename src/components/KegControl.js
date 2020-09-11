@@ -28,7 +28,7 @@ class KegControl extends React.Component {
   }
 
   handleAddingNewKegToList = (newKeg) => {
-    const newMasterKegList = this.state.masterKegList.concat(newKeg).sort();
+    const newMasterKegList = this.state.masterKegList.concat(newKeg);
     this.setState({masterKegList: newMasterKegList,
                   formVisibleOnPage: false });
   }
@@ -41,7 +41,7 @@ class KegControl extends React.Component {
   handlePintDecrement = (decrementedPintKeg) => {
     const newMasterKegList = this.state.masterKegList
       .filter(keg => keg.id !== this.state.selectedKeg.id)
-      .concat(decrementedPintKeg).sort();
+      .concat(decrementedPintKeg);
     this.setState({
       masterKegList: newMasterKegList,
       selectedKeg: null
