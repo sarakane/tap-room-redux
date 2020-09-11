@@ -33,6 +33,7 @@ function NewKegForm(props) {
           type='number'
           name='price'
           min='0'
+          step='0.01'
           placeholder='Price per pint' />
           <input 
           type='number'
