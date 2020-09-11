@@ -1,5 +1,7 @@
-import React, { Children } from 'react';
+import React from 'react';
 import KegList from './KegList';
+import Button from 'react-bootstrap/Button';
+import NewKegForm from './NewKegForm';
 
 class KegControl extends React.Component {
   constructor(props) {
@@ -28,12 +30,17 @@ class KegControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
 
-    currentlyVisibleState = <KegList kegList={this.state.masterKegList} />
-    buttonText = "Add Keg";
+    if(this.state.formVisibleOnPage) {    
+      currentlyVisibleState = <NewKegForm />;
+      buttonText = "Return to Keg List";
+    } else {
+        currentlyVisibleState = <KegList kegList={this.state.masterKegList} />
+        buttonText = "Add Keg";
+    }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <Button onClick={this.handleClick}>{buttonText}</Button>
       </React.Fragment>
     );
   }
