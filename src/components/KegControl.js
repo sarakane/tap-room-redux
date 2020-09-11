@@ -7,15 +7,7 @@ class KegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: [
-        {
-          name: "Mango Cider",
-          brand: "BARN DOOR",
-          price: 7,
-          alcoholContent: 4.6,
-          pints: 124
-        }
-      ],
+      masterKegList: [],
       formVisibleOnPage: false
     };
   }
@@ -26,12 +18,18 @@ class KegControl extends React.Component {
     }));
   }
 
+  handleAddingNewKegToList = (newKeg) => {
+    const newMasterKegList = this.state.masterKegList.concat(newKeg);
+    this.setState({masterKegList: newMasterKegList,
+                  formVisibleOnPage: false });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if(this.state.formVisibleOnPage) {    
-      currentlyVisibleState = <NewKegForm />;
+      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Keg List";
     } else {
         currentlyVisibleState = <KegList kegList={this.state.masterKegList} />
