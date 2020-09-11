@@ -1,6 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# _Tap Room_
+#### _React project for Epicodus, 2020.09.11_
+#### By _**Sara Kane**_
 
-## Available Scripts
+## Description
+Keg inventory tracker for a bar.
+
+## Specifications
+
+* As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+* As a user, I want to submit a form to add a new keg to a list.
+* As a user, I want to be able to click on a keg to see its detail page.
+* As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
+* As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
+
+### Component Diagram
+![Component diagram of application](./src/img/tap-room.png)
+
+## Setup/Installation Requirements
+* Clone the GitHub repository by running `git clone https://github.com/sarakane/tap-room.git` in the terminal.
+  * Or download the ZIP file by clicking on `Code` then `Download ZIP` from this repository.
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -37,32 +57,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Known Bugs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* No known bugs.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+* React
+* HTML
+* CSS
+* JavaScript
+* NPM
+* Webpack
+* Git
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### License
 
-### Analyzing the Bundle Size
+*This site is licensed under the MIT license.*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2020 **_Sara Kane_**
