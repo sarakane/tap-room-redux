@@ -28,7 +28,7 @@ class KegControl extends React.Component {
   }
 
   handleAddingNewKegToList = (newKeg) => {
-    const newMasterKegList = this.state.masterKegList.concat(newKeg);
+    const newMasterKegList = this.state.masterKegList.concat(newKeg).sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase()? 1 : -1 );
     this.setState({masterKegList: newMasterKegList,
                   formVisibleOnPage: false });
   }
@@ -41,10 +41,10 @@ class KegControl extends React.Component {
   handlePintDecrement = (decrementedPintKeg) => {
     const newMasterKegList = this.state.masterKegList
       .filter(keg => keg.id !== this.state.selectedKeg.id)
-      .concat(decrementedPintKeg);
+      .concat(decrementedPintKeg).sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase()? 1 : -1 );
     this.setState({
       masterKegList: newMasterKegList,
-      selectedKeg: null
+      selectedKeg: decrementedPintKeg
     });
   }
 
@@ -65,7 +65,7 @@ class KegControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <Button onClick={this.handleClick}>{buttonText}</Button>
+        <Button variant="outline-primary" onClick={this.handleClick}>{buttonText}</Button>
       </React.Fragment>
     );
   }

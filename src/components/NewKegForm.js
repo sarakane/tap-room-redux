@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
+import { FormGroup } from 'react-bootstrap';
 
 function NewKegForm(props) {
 
@@ -22,28 +23,31 @@ function NewKegForm(props) {
   return (
     <React.Fragment>
       <Form onSubmit={handleNewKegFormSubmission}>
-        <FormControl 
-          type='text'
-          name='name'
-          placeholder='Name' />
+        <FormGroup>
           <FormControl 
-          type='text'
-          name='brand'
-          placeholder='Brand' />
-          <FormControl 
-          type='number'
-          name='price'
-          min='0'
-          step='0.01'
-          placeholder='Price per pint' />
-          <FormControl 
-          type='number'
-          name='alcoholContent'
-          step='0.1'
-          min='0'
-          placeholder='ABV' />
-          <Button type='submit'>Submit</Button>
+            type='text'
+            name='name'
+            placeholder='Name' required />
+            <FormControl 
+            type='text'
+            name='brand'
+            placeholder='Brand' required />
+            <FormControl 
+            type='number'
+            name='price'
+            min='0'
+            step='0.01'
+            placeholder='Price per pint' required />
+            <FormControl 
+            type='number'
+            name='alcoholContent'
+            step='0.1'
+            min='0'
+            placeholder='ABV' required />
+          </FormGroup>
+          <Button variant="success" type='submit'>Submit</Button>
       </Form>
+      <hr />
     </React.Fragment>
   );
 }

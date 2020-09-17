@@ -19,15 +19,15 @@ function KegDetail(props) {
   
   function displayButtonControl() {
     if (keg.pints > 0) {
-      return (<Button onClick={handleClickingSellPint}>Sell Pint</Button>);
+      return (<Button variant="success" onClick={handleClickingSellPint}>Sell Pint</Button>);
     } else {
-      return (<p>Out of stock!</p>);
+      return (<p className="text-danger">Out of stock!</p>);
     }
   }
 
   return (
     <React.Fragment>
-      <h1>Keg Detail</h1>
+      <h2>Keg Detail</h2>
       <h3>{keg.brand} - {keg.name}</h3>
       <p>Price: ${parseInt(keg.price).toFixed(2)}</p>
       <p>ABV: {keg.alcoholContent}</p>
