@@ -29,7 +29,7 @@ function KegDetail(props) {
     <React.Fragment>
       <h2>Keg Detail</h2>
       <h3>{keg.brand} - {keg.name}</h3>
-      <p>Price: ${parseInt(keg.price).toFixed(2)}</p>
+      <p>Price: ${(keg.price).toFixed(2)}</p>
       <p>ABV: {keg.alcoholContent}</p>
       <p>Pints remaining: {keg.pints}</p>
       {displayButtonControl()}
