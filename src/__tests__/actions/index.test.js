@@ -30,4 +30,17 @@ describe('keg list actions', () => {
     });
   });
 
+  test('selectedKeg should create SELECT_KEG action', () => {
+    const { name, brand, price, alcoholContent, pints, id } = kegData;
+    expect(actions.selectedKeg(kegData)).toEqual({
+      type: 'SELECT_KEG',
+      name: name,
+      brand: brand,
+      price: price,
+      alcoholContent: alcoholContent,
+      pints: pints,
+      id: id
+    });
+  });
+
 });
