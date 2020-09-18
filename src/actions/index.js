@@ -1,7 +1,9 @@
+import * as c from './../actions/ActionTypes';
+
 export const addKeg = (keg) => {
   const { name, brand, price, alcoholContent, pints, id } = keg;
   return {
-    type: 'ADD_KEG',
+    type: c.ADD_KEG,
       name: name,
       brand: brand,
       price: price,
@@ -12,5 +14,5 @@ export const addKeg = (keg) => {
 };
 
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });

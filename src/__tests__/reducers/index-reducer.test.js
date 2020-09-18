@@ -3,6 +3,7 @@ import { createStore} from 'redux';
 import formVisibleReducer from '../../reducers/form-visible-reducer';
 import kegListReducer from '../../reducers/keg-list-reducer';
 import * as a from '../../actions/index';
+import * as c from '../../actions/ActionTypes';
 
 let store = createStore(rootReducer);
 
@@ -24,7 +25,6 @@ describe('rootReducer', () => {
 
   test('Check that initial state of kegListReducer matches root reducer', () => {
     const keg = {
-      type: 'ADD_KEG',
       name: 'Name',
       brand: 'BRAND',
       price: 7.5,
