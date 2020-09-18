@@ -8,17 +8,11 @@ import PropTypes from 'prop-types';
 import * as a from './../actions';
 
 class KegControl extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     selectedKeg: null
-  //   };
-  // }
 
   handleClick = () => {
     const { dispatch } = this.props;
     if (this.props.selectedKeg != null) {
-      const action = a.selectedKeg(null);
+      const action = a.clearSelectedKeg();
       dispatch(action);
     } else {
       const action = a.toggleForm();
@@ -37,7 +31,6 @@ class KegControl extends React.Component {
   handleChangingSelectedKeg = (id) => {
     const { dispatch } = this.props;
     const selectedKeg = this.props.masterKegList[id];
-    // this.setState({selectedKeg: selectedKeg});
     const action = a.selectedKeg(selectedKeg);
     dispatch(action);
   }
@@ -45,10 +38,9 @@ class KegControl extends React.Component {
   handlePintDecrement = (decrementedPintKeg) => {
     const { dispatch } = this.props;
     const action = a.addKeg(decrementedPintKeg);
-    dispatch(action)
-    // this.setState({
-    //   selectedKeg: decrementedPintKeg
-    // });
+    dispatch(action);
+    const action2 = a.selectedKeg(decrementedPintKeg);
+    dispatch(action2);
   }
 
   render() {
