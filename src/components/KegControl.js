@@ -29,7 +29,6 @@ class KegControl extends React.Component {
   }
 
   handleAddingNewKegToList = (newKeg) => {
-    //const newMasterKegList = this.state.masterKegList.concat(newKeg).sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase()? 1 : -1 );
     const { dispatch } = this.props;
     const { name, brand, price, alcoholContent, pints, id } = newKeg;
     const action = {
@@ -51,9 +50,6 @@ class KegControl extends React.Component {
   }
 
   handlePintDecrement = (decrementedPintKeg) => {
-    // const newMasterKegList = this.props.masterKegList
-    //   .filter(keg => keg.id !== this.state.selectedKeg.id)
-    //   .concat(decrementedPintKeg).sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase()? 1 : -1 );
     const { dispatch } = this.props;
     const { name, brand, price, alcoholContent, pints, id } = decrementedPintKeg;
     const action = {
