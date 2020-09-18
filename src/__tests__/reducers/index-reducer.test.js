@@ -24,6 +24,10 @@ describe('rootReducer', () => {
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null }));
   });
 
+  test('Check that initial state of selectedKegReducer matches root reducer', () => {
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null }));
+  })
+
   test('Check that initial state of kegListReducer matches root reducer', () => {
     const keg = {
       name: 'Name',
@@ -43,4 +47,20 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
   });
+
+  test('Check that initial state of selectedKegReducer matches root reducer', () => {
+    const keg = {
+      name: 'Name',
+      brand: 'BRAND',
+      price: 7.5,
+      alcoholContent: 5.5,
+      pints: 124,
+      id: 1
+    };
+
+    const action = a.selectedKeg(keg);
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));
+  });
+
 });
