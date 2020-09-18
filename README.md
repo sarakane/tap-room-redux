@@ -1,9 +1,9 @@
 # _Tap Room_
-#### _React project for Epicodus, 2020.09.11_
+#### _React with Reduxproject for Epicodus, 2020.09.11_
 #### By _**Sara Kane**_
 
 ## Description
-Keg inventory tracker for a bar using React.
+Keg inventory tracker for a bar using React with Redux.
 
 ## Specifications
 
@@ -23,7 +23,7 @@ Keg inventory tracker for a bar using React.
 * [NodeJs](https://nodejs.org/en/) is required to run the project 
 
 ### Download Repo
-* Clone this GitHub repository by running `git clone https://github.com/sarakane/tap-room.git` in the terminal.
+* Clone this GitHub repository by running `git clone https://github.com/sarakane/tap-room-redux.git` in the terminal.
   * Or download the ZIP file by clicking on `Code` then `Download ZIP` from this repository.
 
 ### Setup locally
@@ -43,7 +43,6 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 #### `npm test` 
-*Currently there are no tests*<br />
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
@@ -54,9 +53,11 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Technologies Used
 
 * React
+* Redux
 * HTML
 * CSS
 * JavaScript
+* Jest
 * NPM
 * Webpack
 * Git
