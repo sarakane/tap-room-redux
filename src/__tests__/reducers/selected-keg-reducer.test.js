@@ -1,5 +1,5 @@
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
-import * as c from '../../actions/ActionTypes'
+import * as a from '../../actions/index';
 
 describe("selectedKegReducer", () => {
   const kegData = {
@@ -16,15 +16,7 @@ describe("selectedKegReducer", () => {
   });
 
   test('Should successfully add selected keg data to selectedKeg', () => {
-    const action = {
-      type: c.SELECT_KEG,
-      name: "Name",
-      brand: "BRAND",
-      price: 7.5,
-      alcoholContent: 5.5,
-      pints: 124,
-      id: 1
-    }
+    const action = a.selectedKeg(kegData);
 
     expect(selectedKegReducer(null, action)).toEqual({
       name: "Name",
@@ -34,5 +26,6 @@ describe("selectedKegReducer", () => {
       pints: 124,
       id: 1
     });
-  })
+  });
+
 });
