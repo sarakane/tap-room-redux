@@ -5,6 +5,7 @@ import KegDetail from './KegDetail';
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as a from './../actions';
 
 class KegControl extends React.Component {
   constructor(props) {
@@ -30,16 +31,7 @@ class KegControl extends React.Component {
 
   handleAddingNewKegToList = (newKeg) => {
     const { dispatch } = this.props;
-    const { name, brand, price, alcoholContent, pints, id } = newKeg;
-    const action = {
-      type: 'ADD_KEG',
-      name: name,
-      brand: brand,
-      price: price,
-      alcoholContent: alcoholContent,
-      pints: pints,
-      id: id
-    };
+    const action = a.addKeg(newKeg);
     dispatch(action);
     this.setState({ formVisibleOnPage: false });
   }
@@ -51,16 +43,7 @@ class KegControl extends React.Component {
 
   handlePintDecrement = (decrementedPintKeg) => {
     const { dispatch } = this.props;
-    const { name, brand, price, alcoholContent, pints, id } = decrementedPintKeg;
-    const action = {
-      type: 'ADD_KEG',
-      name: name,
-      brand: brand,
-      price: price,
-      alcoholContent: alcoholContent,
-      pints: pints,
-      id: id
-    };
+    const action = a.addKeg(decrementedPintKeg);
     dispatch(action)
     this.setState({
       selectedKeg: decrementedPintKeg

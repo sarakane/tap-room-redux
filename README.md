@@ -1,5 +1,5 @@
 # _Tap Room_
-#### _React with Reduxproject for Epicodus, 2020.09.11_
+#### _React with Redux project for Epicodus, 2020.09.18_
 #### By _**Sara Kane**_
 
 ## Description
