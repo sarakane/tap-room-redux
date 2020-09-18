@@ -11,7 +11,9 @@ export default (state = null, action) => {
           alcoholContent: alcoholContent,
           pints: pints,
           id: id
-      };
+      }
+    case c.CLEAR_SELECTED_KEG:
+      return null;
     default:
       return state;
   }
