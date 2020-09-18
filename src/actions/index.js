@@ -10,3 +10,7 @@ export const addKeg = (keg) => {
       id: id
   }
 };
+
+export const toggleForm = () => ({
+  type: 'TOGGLE_FORM'
+});

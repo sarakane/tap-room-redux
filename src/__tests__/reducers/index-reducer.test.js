@@ -38,9 +38,7 @@ describe('rootReducer', () => {
   });
   
   test('Check that initial state of formVisibleReducer matches root reducer', () => {
-    const action = {
-      type: 'TOGGLE_FORM'
-    }
+    const action = a.toggleForm();
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
   });

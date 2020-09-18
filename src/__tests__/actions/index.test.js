@@ -23,4 +23,11 @@ describe('keg list actions', () => {
         id: id
       });
   });
+
+  test('toggleForm should create TOGGLE_FORM action', () => {
+    expect(actions.toggleForm()).toEqual({
+      type: 'TOGGLE_FORM'
+    });
+  });
+
 });
