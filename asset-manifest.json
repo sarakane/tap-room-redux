@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/tap-room-redux/static/css/main.1a8f37e3.chunk.css",
+    "main.js": "/tap-room-redux/static/js/main.58b0534f.chunk.js",
+    "main.js.map": "/tap-room-redux/static/js/main.58b0534f.chunk.js.map",
+    "runtime-main.js": "/tap-room-redux/static/js/runtime-main.03f28298.js",
+    "runtime-main.js.map": "/tap-room-redux/static/js/runtime-main.03f28298.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/tap-room-redux/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.a11699ee.chunk.js": "/tap-room-redux/static/js/2.a11699ee.chunk.js",
+    "static/js/2.a11699ee.chunk.js.map": "/tap-room-redux/static/js/2.a11699ee.chunk.js.map",
+    "index.html": "/tap-room-redux/index.html",
+    "precache-manifest.0d5fad49dbedc7b86f43eec455e18c4a.js": "/tap-room-redux/precache-manifest.0d5fad49dbedc7b86f43eec455e18c4a.js",
+    "service-worker.js": "/tap-room-redux/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/tap-room-redux/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.1a8f37e3.chunk.css.map": "/tap-room-redux/static/css/main.1a8f37e3.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03f28298.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.a11699ee.chunk.js",
+    "static/css/main.1a8f37e3.chunk.css",
+    "static/js/main.58b0534f.chunk.js"
+  ]
+}
