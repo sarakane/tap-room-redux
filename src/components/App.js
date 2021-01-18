@@ -7,8 +7,8 @@ import Container from 'react-bootstrap/Container';
 function App() {
   return (
     <React.Fragment>
+      <Header />
       <Container>
-        <Header />
         <KegControl />
       </Container>
     </React.Fragment>
