@@ -1,6 +1,7 @@
+import { sampleData } from '../api/sampleData';
 import * as c from './../actions/ActionTypes';
 
-export default (state = {}, action) => {
+export default (state = sampleData, action) => {
   const {name, brand, price, alcoholContent, pints, id} = action;
   switch(action.type) {
     case c.ADD_KEG:
