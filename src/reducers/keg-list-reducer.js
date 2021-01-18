@@ -2,8 +2,8 @@ import { sampleData } from '../api/sampleData';
 import * as c from './../actions/ActionTypes';
 
 export default (state = sampleData, action) => {
-  const {name, brand, price, alcoholContent, pints, id} = action;
-  switch(action.type) {
+  const { name, brand, price, alcoholContent, pints, id } = action;
+  switch (action.type) {
     case c.ADD_KEG:
       return Object.assign({}, state, {
         [id]: {
@@ -12,10 +12,10 @@ export default (state = sampleData, action) => {
           price: price,
           alcoholContent: alcoholContent,
           pints: pints,
-          id: id
-        }
+          id: id,
+        },
       });
-    default: 
+    default:
       return state;
   }
-}
+};

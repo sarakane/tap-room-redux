@@ -6,7 +6,7 @@ import { ListGroup } from 'react-bootstrap';
 function KegList(props) {
   return (
     <React.Fragment>
-      <ListGroup style={{marginBottom: '5px'}} variant='flush'>
+      <ListGroup style={{ marginBottom: '5px' }} variant='flush'>
         {Object.values(props.kegList).map((keg) => (
           <Keg
             name={keg.name}
