@@ -15,7 +15,7 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.5"
   },
-  "homepage": "http://sarakane.github.io/tap-room",
+  "homepage": "http://sarakane.github.io/tap-room-redux",
   "scripts": {
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
